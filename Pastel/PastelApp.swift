@@ -2443,10 +2443,8 @@ struct ContentView: View {
                 downloadSidebarHeader
 
                 if filteredDownloadedAppGroups.isEmpty {
-                    Text(String(localized: "无"))
-                        .font(.callout.weight(.medium))
-                        .foregroundStyle(.secondary)
-                    .frame(maxWidth: .infinity, minHeight: 260)
+                    Color.clear
+                        .frame(maxWidth: .infinity, minHeight: 260)
                 } else {
                     LazyVStack(spacing: 4) {
                         ForEach(filteredDownloadedAppGroups) { group in
